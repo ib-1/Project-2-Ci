@@ -1,11 +1,88 @@
-body {
+/* remove any default margina and padding */
+body { 
     margin: 0;
     padding: 0;
-    background-color: azure;
+    background-color: #0091AD;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
 
 body h1{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 1em;
+    font-size:40px;
+}
+
+#game-container {
+    margin: 0 auto;
+    background-color: #6EFAFB;
+    width: 80%;
+    padding: 2em;
+    border-radius: 20px;
+}
+
+#level-title {
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+#game-elements {
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#left-buttons button{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#right-buttons button{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+    
+}
+
+.userxcomputer {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.btn {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    padding: none;
+    margin-bottom: 10px;
+}
+
+#center-text {
+    text-align: center;
+    margin: auto;
+    font-size: 3em;
+}
+
+#submit-button {
+    background-color: rgb(111, 214, 111);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 2em;
+    text-align: center;
+    border: 1px solid green;
+}
+
+.submitHolder {
+    text-align: center;
 }
 

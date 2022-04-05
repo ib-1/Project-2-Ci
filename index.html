@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,34 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>RPSLS</title>
 </head>
+
 <body>
     <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
 
-    <div id="game-container">
-        <h2>Level: <span>0</span></h2> 
+    <section id="game-container">
+        <h2 id="level-title">Level: <span id="level-count">0</span></h2>
         <div id="game-elements">
-            
+            <div id=left-buttons>
+                <h3 class="userxcomputer">You</h3>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+            </div>
+            <div id="center-text">
+                <h3>VS</h3> 
+            </div>
+            <div id="right-buttons">
+                <h3 class="userxcomputer">Computer</h3>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+            </div>
         </div>
-        <button type="submit">Submit</button>
-
-    </div>
+        <div class="submitHolder">
+            <button type="submit" id="submit-button">Submit</button>
+        </div>
+    </section>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
