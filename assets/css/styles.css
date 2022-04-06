@@ -104,3 +104,12 @@ body h1{
     text-align: center;
 }
 
+#score-section {
+    margin: 0 auto;
+    position: absolute;
+    display: inline-block;
+    font-size: 1.4em;
+    right: 400px;
+    bottom: 150px;
+}
+
