@@ -86,7 +86,7 @@ body h1{
     font-size: 0.5em;
 }
 
-#submit-button {
+.bottom-button {
     background-color: rgb(111, 214, 111);
     color: white;
     padding: 30px;
@@ -94,6 +94,10 @@ body h1{
     font-size: 2em;
     text-align: center;
     border: 1px solid green;
+}
+
+#continue-button {
+    display: none;
 }
 
 .submitHolder {
