@@ -18,20 +18,25 @@
         <div id="game-elements">
             <div id=left-buttons>
                 <h3 class="userxcomputer">You</h3>
-                <button class="btn "><i class="fa-solid fa-hand-back-fist"></i></button>
-                <button class="btn"><i class="fa-solid fa-hand"></i></button>
-                <button class="btn"><i class="fa-solid fa-hand-scissors"></i></button>
+                <button class="btn" data-type="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+                <button class="btn" data-type="paper"><i class="fa-solid fa-hand"></i></button>
+                <button class="btn" data-type="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
+                <button class="btn" data-type="lizard"><i class="fa-solid fa-hand-lizard"></i></button>
+                <button class="btn" data-type="spock"><i class="fa-solid fa-hand-spock"></i></button>
             </div>
             <div id="center-text">
-                <h3>VS</h3> 
+                <div id="text-container">
+                    <h3>VS</h3>
+                    <p><span id=winner>-</span></p> 
+                </div>
             </div>
             <div id="right-buttons">
                 <h3 class="userxcomputer">Computer</h3>
-                <button class="btn"><i class="fa-solid fa-question"></i></i></button>
+                <button class="btn" data-type="computer" id="computer"><i class="fa-solid fa-question"></i></button>
             </div>
         </div>
         <div class="submitHolder">
-            <button type="submit" id="submit-button">Submit</button>
+            <button type="submit" id="submit-button" data-type="submit">Submit</button>
         </div>
     </section>
     <script src="assets/js/script.js"></script>
