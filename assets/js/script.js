@@ -86,16 +86,28 @@ function computerChoice() {
 
 function runGame(choice) {
     let winner = document.getElementById("winner");
-    if (choice === "rock" && computerGuess === "scissors" || computerGuess === "lizard") {
+    if (choice === "rock" && computerGuess === "scissors") {
         winner.innerHTML = "You win!";
-    } else if (choice === "paper" && computerGuess === "rock" || computerGuess === "spock") {
+    } else if (choice === "rock" && computerGuess === "lizard") {
         winner.innerHTML = "You win!";
-    } else if (choice === "scissors" && computerGuess === "paper" || computerGuess === "lizard") {
+    } else if (choice === "paper" && computerGuess === "rock") {
         winner.innerHTML = "You win!";
-    } else if (choice === "Lizard" && computerGuess === "paper" || computerGuess === "spock") {
+    } else if (choice === "paper" && computerGuess === "spock") {
         winner.innerHTML = "You win!";
-    } else if (choice === "spock" && computerGuess === "scissors" || computerGuess === "rock") {
+    } else if (choice === "scissors" && computerGuess === "paper") {
         winner.innerHTML = "You win!";
+    } else if (choice === "scissors" && computerGuess === "lizard") {
+        winner.innerHTML = "You win!";
+    } else if (choice === "Lizard" && computerGuess === "paper") {
+        winner.innerHTML = "You win!";
+    } else if (choice === "Lizard" && computerGuess === "spock") {
+        winner.innerHTML = "You win!";
+    } else if (choice === "spock" && computerGuess === "scissors") {
+        winner.innerHTML = "You win!";
+    } else if (choice === "spock" && computerGuess === "rock") {
+        winner.innerHTML = "You win!";
+    } else if (choice === computerGuess) {
+        winner.innerHTML = "tie!"
     } else {
         winner.innerHTML = "Computer wins!";
     }
