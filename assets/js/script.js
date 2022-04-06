@@ -40,6 +40,23 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     alert("please choose a valid option!");
                 }
+            } else if (this.getAttribute("data-type") === "continue") {
+                let submitBtn = document.getElementById("submit-button");
+                let continueBtn = document.getElementById("continue-button");
+                let computer = document.getElementById("computer");
+                let winner = document.getElementById("winner");
+                let buttons = document.getElementsByTagName("button");
+                for (let button of buttons) {
+                    if (button.style.border = "10px solid green") {
+                    button.style.border = "none";
+                    button.style.color = "black";
+                    }
+                }
+                computer.innerHTML = `<i class="fa-solid fa-question"></i>`;
+                winner.innerHTML = "-";
+                continueBtn.style.display = "none";
+                submitBtn.style.display = "inline";
+                return choice = "";
             }
         })
     }
@@ -127,21 +144,5 @@ function restartGame() {
     let continueBtn = document.getElementById("continue-button");
     continueBtn.style.display = "inline";
     submitBtn.style.display = "none";
-    continueBtn.addEventListener("click", function() {
-        let computer = document.getElementById("computer");
-        let winner = document.getElementById("winner");
-        let buttons = document.getElementsByTagName("button");
-        for (let button of buttons) {
-            if (button.style.border = "10px solid green") {
-                button.style.border = "none";
-                button.style.color = "black";
-            }
-        }
-        computer.innerHTML = `<i class="fa-solid fa-question"></i>`;
-        winner.innerHTML = "-";
-        continueBtn.style.display = "none";
-        submitBtn.style.display = "inline";
-        return choice = "";
-    })
 }
 
