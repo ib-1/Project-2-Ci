@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 checkActive(data);
                 return choice = this.getAttribute("data-type");
             } else if (this.getAttribute("data-type") === "submit") {
-                console.log("current choice is " + choice)
                 if (choiceArray.includes(choice)) {
                     computerChoice();
                     runGame(choice);
@@ -109,28 +108,39 @@ function runGame(choice) {
     let winner = document.getElementById("winner");
     if (choice === "rock" && computerGuess === "scissors") {
         winner.innerHTML = "You win!";
+        incrementUserScore();
     } else if (choice === "rock" && computerGuess === "lizard") {
         winner.innerHTML = "You win!";
+        incrementUserScore();
     } else if (choice === "paper" && computerGuess === "rock") {
         winner.innerHTML = "You win!";
+        incrementUserScore();
     } else if (choice === "paper" && computerGuess === "spock") {
         winner.innerHTML = "You win!";
+        incrementUserScore();
     } else if (choice === "scissors" && computerGuess === "paper") {
         winner.innerHTML = "You win!";
+        incrementUserScore();
     } else if (choice === "scissors" && computerGuess === "lizard") {
         winner.innerHTML = "You win!";
+        incrementUserScore();
     } else if (choice === "lizard" && computerGuess === "paper") {
         winner.innerHTML = "You win!";
+        incrementUserScore();
     } else if (choice === "lizard" && computerGuess === "spock") {
         winner.innerHTML = "You win!";
+        incrementUserScore();
     } else if (choice === "spock" && computerGuess === "scissors") {
         winner.innerHTML = "You win!";
+        incrementUserScore();
     } else if (choice === "spock" && computerGuess === "rock") {
         winner.innerHTML = "You win!";
+        incrementUserScore();
     } else if (choice === computerGuess) {
         winner.innerHTML = "tie!"
     } else {
         winner.innerHTML = "Computer wins!";
+        incrementComputerScore();
     }
     restartGame(); 
 }
@@ -144,5 +154,22 @@ function restartGame() {
     let continueBtn = document.getElementById("continue-button");
     continueBtn.style.display = "inline";
     submitBtn.style.display = "none";
+}
+
+/**
+* this function will add 1 to the users score when they win the game 
+*/
+function incrementUserScore() {
+    let userScore = document.getElementById("user-score");
+    let userNumber = parseInt(document.getElementById("user-score").innerHTML);
+    userNumber += 1;
+    userScore.innerHTML = userNumber;
+}
+
+function incrementComputerScore() {
+    let computerScore = document.getElementById("computer-score");
+    let computerNumber = parseInt(document.getElementById("computer-score").innerHTML);
+    computerNumber += 1;
+    computerScore.innerHTML = computerNumber;
 }
 
