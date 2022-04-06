@@ -132,7 +132,7 @@ function runGame(choice) {
     } else {
         winner.innerHTML = "Computer wins!";
     }
-    restartGame();
+    restartGame(); 
 }
 
 /**
