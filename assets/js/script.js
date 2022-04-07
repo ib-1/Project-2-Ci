@@ -1,4 +1,9 @@
+/**
+ * 
+ */
+
 document.addEventListener("DOMContentLoaded", function() {
+    console.log("loaded page");
     let buttons = document.getElementsByTagName("button");
     let activeStyle = "10px solid green";
     let choiceArray = ["rock", "paper", "scissors", "lizard", "spock",]
@@ -80,23 +85,56 @@ document.addEventListener("DOMContentLoaded", function() {
  * 
  */
 function computerChoice() {
-    let computer = document.getElementById("computer");
-    let randomNumber = Math.floor((Math.random() * 5) + 1);
-    if (randomNumber === 1) {
-        computer.innerHTML = `<i class="fa-solid fa-hand-back-fist"></i>`;
-        return computerGuess = "rock";
-    } else if (randomNumber === 2) {
-        computer.innerHTML = `<i class="fa-solid fa-hand"></i>`;
-        return computerGuess = "paper";
-    } else if (randomNumber === 3) {
-        computer.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
-        return computerGuess = "scissors";
-    } else if (randomNumber === 4) {
-        computer.innerHTML = `<i class="fa-solid fa-hand-lizard"></i>`;
-        return computerGuess = "lizard";
-    } else if (randomNumber === 5) {
-        computer.innerHTML = `<i class="fa-solid fa-hand-spock"></i>`;
-        return computerGuess = "spock";
+    let gameLevel = document.getElementById("level-title").innerHTML;
+    console.log(gameLevel);
+    if (gameLevel === "Level: 1") {
+        let computer = document.getElementById("computer");
+        let randomNumber = Math.floor((Math.random() * 3) + 1);
+        if (randomNumber === 1) {
+            computer.innerHTML = `<i class="fa-solid fa-hand-back-fist"></i>`;
+            return computerGuess = "rock";
+        } else if (randomNumber === 2) {
+            computer.innerHTML = `<i class="fa-solid fa-hand"></i>`;
+            return computerGuess = "paper";
+        } else if (randomNumber === 3) {
+            computer.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
+            return computerGuess = "scissors";
+        }
+    } else if (gameLevel === "Level: 2") {
+        let computer = document.getElementById("computer");
+        let randomNumber = Math.floor((Math.random() * 4) + 1);
+        if (randomNumber === 1) {
+            computer.innerHTML = `<i class="fa-solid fa-hand-back-fist"></i>`;
+            return computerGuess = "rock";
+        } else if (randomNumber === 2) {
+            computer.innerHTML = `<i class="fa-solid fa-hand"></i>`;
+            return computerGuess = "paper";
+        } else if (randomNumber === 3) {
+            computer.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
+            return computerGuess = "scissors";
+        } else if (randomNumber === 4) {
+            computer.innerHTML = `<i class="fa-solid fa-hand-lizard"></i>`;
+            return computerGuess = "lizard";
+        }
+    } else if (gameLevel === "Level: 3") {
+        let computer = document.getElementById("computer");
+        let randomNumber = Math.floor((Math.random() * 5) + 1);
+        if (randomNumber === 1) {
+            computer.innerHTML = `<i class="fa-solid fa-hand-back-fist"></i>`;
+            return computerGuess = "rock";
+        } else if (randomNumber === 2) {
+            computer.innerHTML = `<i class="fa-solid fa-hand"></i>`;
+            return computerGuess = "paper";
+        } else if (randomNumber === 3) {
+            computer.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
+            return computerGuess = "scissors";
+        } else if (randomNumber === 4) {
+            computer.innerHTML = `<i class="fa-solid fa-hand-lizard"></i>`;
+            return computerGuess = "lizard";
+        } else if (randomNumber === 5) {
+            computer.innerHTML = `<i class="fa-solid fa-hand-spock"></i>`;
+            return computerGuess = "spock";
+        }
     }
     
 }
@@ -165,11 +203,12 @@ function incrementUserScore() {
     userNumber += 1;
     userScore.innerHTML = userNumber;
 }
-
+/**
+ * this function will add 1 to the computers score when the computer wins the match
+ */
 function incrementComputerScore() {
     let computerScore = document.getElementById("computer-score");
     let computerNumber = parseInt(document.getElementById("computer-score").innerHTML);
     computerNumber += 1;
     computerScore.innerHTML = computerNumber;
 }
-
