@@ -9,14 +9,26 @@
     
     <title>RPSLS</title>
 </head>
-
+<div id="win-overlay" class="overlay">
+    <h1>Congrats you won!</h1>
+    <ul>
+        <a href="index.html" onClick="refreshPage()"><li class="buttonDesign">Level 1</li></a>
+        <a href="level2.html"><li class="buttonDesign">Level 2</li></a>
+        <a href="" onClick="refreshPage()"><li class="buttonDesign">Try this level again</li></a>
+    </ul>
+</div>
+<div id="lose-overlay" class="overlay">
+    <h1>Awww.. unlucky computer wins</h1>
+    <ul>
+        <a href="" onClick="refreshPage()"><li class="buttonDesign">Try again</li></a>
+    </ul>
+</div>
 <body>
     <section id = "nav-bar">
         <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
         <ul>
             <a href="index.html"><li class="buttonDesign">Level 1</li></a>
             <a href="level2.html"><li class="buttonDesign">Level 2</li></a>
-            <a href="level3.html"><li class="buttonDesign">Level 3</li></a>
         </ul>
     </section>
     <section id="game-container">

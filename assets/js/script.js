@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (choiceArray.includes(choice)) {
                     computerChoice();
                     runGame(choice);
+                    gameWinner();
                 } else {
                     alert("please choose a valid option!");
                 }
@@ -212,3 +213,19 @@ function incrementComputerScore() {
     computerNumber += 1;
     computerScore.innerHTML = computerNumber;
 }
+
+function gameWinner() {
+    let userScr = parseInt(document.getElementById("user-score").innerHTML);
+    let computerScr = parseInt(document.getElementById("computer-score").innerHTML);
+    let winOverlay = document.getElementById("win-overlay");
+    let loseOverlay = document.getElementById("lose-overlay");
+    if (userScr === 3) {
+        winOverlay.style.visibility = "visible";
+    } else if (computerScr === 3)  {
+        loseOverlay.style.visibility = "visible";
+    }
+}
+
+function refreshPage(){
+    window.location.reload();
+} 
