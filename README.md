@@ -2,7 +2,7 @@
 Click [here]() to view the live web site 
 
 ### responsive design 
-![Am I responsive]()
+![Am I responsive](assets/images/am_i_responsiveLayout_prj2.png)
 <hr>
 
 ## UX
