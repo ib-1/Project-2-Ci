@@ -55,7 +55,7 @@ body h1{
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
+} 
 
 #left-buttons button{
     display: flex;
@@ -160,3 +160,39 @@ body h1{
 .overlay li{
     padding-bottom: 10px;
 }
+#computer{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#you {
+    text-align: left;
+    padding-left: 120px;
+}
+
+@media screen and (max-width: 475px) {
+    .overlay li{
+        margin: 10px;
+    }
+    #game-elements {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    } 
+    #left-buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    #center-text {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    #game-container {
+        width: 90%;
+    }
+  }

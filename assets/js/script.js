@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 /**
- * this function generates a random number between 1-5 and assings it a value
+ * this function generates a random number between 1-5 (depending on the level it will be 1-3 and 1-4) and assings it a value
  * from rock paper scissors lizard spock which will then be the computers guess
  * 
  */
