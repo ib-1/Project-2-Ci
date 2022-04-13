@@ -12,20 +12,20 @@
     
     <title>RPSLS</title>
 </head>
-<div id="win-overlay" class="overlay">
-    <h1>Congrats you won!</h1>
-    <ul>
-        <a href="" onClick="refreshPage()"><li class="buttonDesign" role="button" aria-label="this button will refresh the page so you can try this level again">Try this level again</li></a>
-        <a href="level2.html"><li class="buttonDesign" role="button" aria-label="this button will take you to level 2">Level 2</li></a>
-    </ul>
-</div>
-<div id="lose-overlay" class="overlay">
-    <h1>Awww.. unlucky computer wins</h1>
-    <ul>
-        <a href="" onClick="refreshPage()"><li class="buttonDesign" role="button" aria-label="this button will refresh the page so you can try this level again">Try again</li></a>
-    </ul>
-</div>
 <body>
+    <div id="win-overlay" class="overlay">
+        <h1>Congrats you won!</h1>
+        <ul>
+            <a href="" onClick="refreshPage()"><li class="buttonDesign" role="button" aria-label="this button will refresh the page so you can try this level again">Try this level again</li></a>
+            <a href="level2.html"><li class="buttonDesign" role="button" aria-label="this button will take you to level 2">Level 2</li></a>
+        </ul>
+    </div>
+    <div id="lose-overlay" class="overlay">
+        <h1>Awww.. unlucky computer wins</h1>
+        <ul>
+            <a href="" onClick="refreshPage()"><li class="buttonDesign" role="button" aria-label="this button will refresh the page so you can try this level again">Try again</li></a>
+        </ul>
+    </div>
     <section id = "nav-bar">
         <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
     </section>
@@ -34,9 +34,9 @@
         <div id="game-elements">
             <div id=left-buttons>
                 <h3 class="userxcomputer">You</h3>
-                <button class="btn" data-type="rock" role="button" aria-label="This button is the choice rock"><i class="fa-solid fa-hand-back-fist"></i></button>
-                <button class="btn" data-type="paper" role="button" aria-label="This button is the choice paper"><i class="fa-solid fa-hand"></i></button>
-                <button class="btn" data-type="scissors" role="button" aria-label="This button is the choice scissors"><i class="fa-solid fa-hand-scissors"></i></button>
+                <button class="btn" data-type="rock" aria-label="This button is the choice rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+                <button class="btn" data-type="paper" aria-label="This button is the choice paper"><i class="fa-solid fa-hand"></i></button>
+                <button class="btn" data-type="scissors" aria-label="This button is the choice scissors"><i class="fa-solid fa-hand-scissors"></i></button>
             </div>
             <div id="center-text">
                 <div id="text-container">
@@ -46,12 +46,12 @@
             </div>
             <div id="right-buttons">
                 <h3 class="userxcomputer">Computer</h3>
-                <button class="btn" data-type="computer" id="computer" ><i class="fa-solid fa-question "role="button" aria-label="This button is the computers choice so its not interactable"></i></button>
+                <button class="btn" data-type="computer" id="computer" ><i class="fa-solid fa-question" aria-label="This button is the computers choice so its not interactable"></i></button>
             </div>
         </div>
         <div class="submitHolder">
-            <button type="submit" id="submit-button" data-type="submit" class="bottom-button" role="button" aria-label="This button is so you can submit your answer">Submit</button>
-            <button type="submit" id="continue-button" data-type="continue" class="bottom-button" role="button" aria-label="This button is to continue the game">Continue</button>
+            <button type="submit" id="submit-button" data-type="submit" class="bottom-button"  aria-label="This button is so you can submit your answer">Submit</button>
+            <button type="submit" id="continue-button" data-type="continue" class="bottom-button"  aria-label="This button is to continue the game">Continue</button>
         </div>
         <div id="score-section">
             <h3>Score: </h3>

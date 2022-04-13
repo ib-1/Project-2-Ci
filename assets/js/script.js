@@ -1,5 +1,5 @@
 /**
- * 
+ * when the page loads the function will go through every btton and add a event listener of click
  */
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let activeStyle = "10px solid green";
     let choiceArray = ["rock", "paper", "scissors", "lizard", "spock",]
     let choice = "";
+    let computerGuess = "";
     for (let button of buttons) {
 
         button.addEventListener("click", function() {
